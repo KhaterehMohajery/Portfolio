@@ -72,7 +72,7 @@
 
                         <h1>Predicting the Presence of West Nile Virus in Chicago 2007-2014</h1>
                         <img src="images/kaggle_heatmap.png"/>
-                        <p>   Wordcloud of most frequent words in news headlines.<p>
+                        <p>   Heatmap of positions with higher probability of West Nile Virus presence.<p>
                         <h2> Introduction </h2>
                         <p> West Nile virus is most commonly spread to humans through infected mosquitoes.
 Traps has been set by Chicago Department of Public Health (CDPH) across the city of Chicago to capture mosquitoes and then tested for the virus. The results of these tests influence when and where the city will spray airborne pesticides to control adult mosquito populations.
@@ -82,10 +82,23 @@ Given weather, location and spraying data, this competition asked to predict whe
 The test dataset included above information for years 2008, 2010, 2012 and 2014 except for the type of mosquitoes found in traps. The spraying data was not provided for the test dataset and therefore could not be used as a predictor.
 The weather conditions were averaged over 30 days and along with trap locations, dates and number of mosquitoes in traps were used as predictors in several classifying models (random forest, KNN, logistic regression and gradient boosting). For each model, best parameters were chosen using grid search. Due to inbalance classes (having a lot more incidences of 0 with no presence of the virus compared to 1), AUC metric was used as the classifier score.<p>
                         <h2> Results </h2>
-                        <p> Stacking the results of two best classifying models of Gradient boosting and KNN gave the highest score of 0.95 on training set and 0.77376 on the submitted test set showing the trap being the most important predicting feature. Also, weather conditions such as Dew Point turned out to be important features.<p>
+                        <p> Stacking the results of two best classifying models of Gradient boosting and KNN gave the highest score of 0.85 on training set and 0.77376 on the submitted test set showing the trap being the most important predicting feature. Also, weather conditions such as Dew Point turned out to be important features.<p>
 
                         <p> Submitting the probabilities for the test dataset resulted in score of 0.77376. This ranked our group at 324 on Kaggle competition board which is among the top 20% of the competitors.<p>
                         <p> For more detail please check out <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfoli_Piece_2.ipynb">here</a>. The code is also available at <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_2_notebook.ipynb">here</a>. <p>
+                          <h1>Predicting Terrorism / Bayesian Inference </h1>
+                          <img src="images/GTD_trend.png"/>
+                          <p>   Trends for the number of terror attacks around the world in 1970 to 2015.<p>
+                          <h2> Introduction </h2>
+                          <p> The aim of this project is to investigate some aspects of the Global Terrorism Database (GTD) with focusing on middle east region and ‘Bombing/Explosion’ terror attacks.<p>
+                          <h2> Data and Methods</h2>
+                          <p> The Global Terrorism Database was put together and is maintained by National Consortium for the Study of Terrorism and Responses to Terrorism (START). More than 150,000 terrorist incidents are recorded around the world from 1970 to 2015. The code book that comes with the data base explains the variables and information accompanying each incident. 137 variables describe information about time, type, location, motive and the number of people involved in each incident among many others. Unfortunately, the data for the year of 1993 is lost. <p>
+                          <p> The Bayesian approach was taken to investigate whether the number of terror attacks happened in Lebanon and West Bank during years 2000 - 2015 are significantly different from each other or they are following a same distribution. The prior distribution was chosen to have a gamma distribution. Uniform distribution was assumed for the mean and standard deviation of prior. The mean and standard deviation of the data from years 1970 to 2000 for these two countries were set as the prior’s mean and standard deviation upper limit and zero as their lower limits.<p>
+                          <p> In terms of predicting the bombing attacks in 1993 in Lebanon, it was assumed that the number of bombing attacks is linearly related to the year meaning: Number of bombing in Lebanon = B0 + B1 * (year-1970) Assuming uniform distribution for B0 (intercept) and Normal distribution for B1, the data from bombing attacks in Lebanon from 1970-2015 except for 1993 where the data was missing was used in the analysis. Poisson distribution was chosen as the prior distribution.<p>    
+                          <h2> Results </h2>
+                          <p> The results for the number of terror attacks in Lebanon and West Bank during years 2000-2015 showed they are not statistically different. Lebanon has an average of 57 attacks with standard deviation of 79. West Bank has the average of 77 attacks with standard deviation of 83. However, since the 95% credible intervals for West Bank includes the mean value of Lebanon and also the difference of mean includes zero, the two distributions are not significantly different. <p>
+                          <p> The bayesian regression resulted in very small B1 indicating the year does not linearly correlated with the number of bombing attacks in Lebanon and the intercept value which is a constant value takes the value of the average of bombings during the timeframe. The result of the prediction of bombing attacks in Lebanon in 1993 is basically the mean of the values of bombings in Lebanon between 1970-2015.<p>
+                          <p> For more detail please check out <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfoli_Piece_2.ipynb">here</a>. The code is also available at <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_2_notebook.ipynb">here</a>. <p>
 
                     </div>
                 </div>
