@@ -59,7 +59,7 @@
                     <div class="col-lg-12">
                         <h1>Predicting the Behavior of Financial Markets from News Headlines</h1>
                         <img src="images/Capstone_word1.png"/>
-                        <p>  Wordcloud of most frequent words in news headlines.<p>
+                        <p>   Wordcloud of most frequent words in news headlines.<p>
                         <h2> Introduction </h2>
                         <p> Behavioral Economics believe in importance of emotions in human decision making process and subsequently its influence on market through investors and social mood. In recent years, variety of methods have been investigated to compute indicators of the public’s sentiment and mood state from large-scale online data instead of traditional surveys.One of the online data sources is news media content that has been shown to be an important factor shaping investor sentiment. In this project, the relation between news headline and market was investigated to explore the possibility of predicting market trends from news using natural language processing (NLP) techniques.<p>
                         <h2> Data </h2>
@@ -69,6 +69,20 @@
                         <p> The other approach was to turn this problem to a classification problem. Each day that had a closing index higher than or equal to the opening index classified as a positive day (labeled as class 1). For those days with lower closing index, the day labeled as class zero. In this approach, all the words in news headlines for that day were used for the classification.<p>
                         <p> Using the headlines from the previous day in addition to the same day news headlines along with including two-word phrases increased the accuracy of the random forest classification model to 0.69 (from baseline accuracy of 0.53).<p>
                         <p> For more detail please check out <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_5.ipynb">here</a>. The code is also available at <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_5_notebook.ipynb">here</a>. <p>
+
+                        <h1>Predicting the Presence of West Nile Virus in Chicago 2007-2014</h1>
+                        <img src="images/kaggle_heatmap.png"/>
+                        <p>   Wordcloud of most frequent words in news headlines.<p>
+                        <h2> Introduction </h2>
+                        <p> Behavioral Economics believe in importance of emotions in human decision making process and subsequently its influence on market through investors and social mood. In recent years, variety of methods have been investigated to compute indicators of the public’s sentiment and mood state from large-scale online data instead of traditional surveys.One of the online data sources is news media content that has been shown to be an important factor shaping investor sentiment. In this project, the relation between news headline and market was investigated to explore the possibility of predicting market trends from news using natural language processing (NLP) techniques.<p>
+                        <h2> Data </h2>
+                        <p> Three measures were selected as market indicators including Dow Jones Industrial Average  (DJIA), the S&P 500 Volatility Index (VIX) and gold price. The data for these indicators was collected from Yahoo Finance website and <a href="http://www.gold.org/">gold.org</a> website for the years of 2008 to 2016. Two news headline datasets were employed in this test. The archive of New York Times website was scraped to collect the top business news headlines for each day from January 2016 to January 2017. More comprehensive dataset was downloaded from kaggle which included top 25 business headlines from reddit which was a collection of variety of sources from 2008 to 2016.</p>
+                        <h2> Methods and Results </h2>
+                        <p> Very weak correlation between the negative news sentiment score and market indicators was found. However, the sign of the correlations are in correct direction meaning that increased negativity score resulted in higher gold price and volatility index and lower DJ score all indicating negative trends in financial markets. The volatility index (VIX) showed highest correlation among market indicators and therefore used for predictions.<p>
+                        <p> The other approach was to turn this problem to a classification problem. Each day that had a closing index higher than or equal to the opening index classified as a positive day (labeled as class 1). For those days with lower closing index, the day labeled as class zero. In this approach, all the words in news headlines for that day were used for the classification.<p>
+                        <p> Using the headlines from the previous day in addition to the same day news headlines along with including two-word phrases increased the accuracy of the random forest classification model to 0.69 (from baseline accuracy of 0.53).<p>
+                        <p> For more detail please check out <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_5.ipynb">here</a>. The code is also available at <a href="https://github.com/KhaterehMohajery/Portfolio/blob/gh-pages/Portfolio_Piece_5_notebook.ipynb">here</a>. <p>
+
                     </div>
                 </div>
             </div>
